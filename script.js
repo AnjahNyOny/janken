@@ -136,4 +136,5 @@ function playGame() {
     }
 }
 
-playGame();
+const playBtn = document.querySelector("#playBtn");
+playBtn.addEventListener("click", () => playGame());
