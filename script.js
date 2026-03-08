@@ -135,5 +135,5 @@ function playGame() {
         console.log(`Draw: ${humanScore} - ${computerScore}`);
     }
 }
-
-playGame();
+const playBtn = document.querySelector("#playBtn");
+playBtn.addEventListener("click", () => playGame());
