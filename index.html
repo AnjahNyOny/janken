@@ -8,22 +8,146 @@
 </head>
 
 <body>
-    <main>
-
+    <header>
         <h1>Janken</h1>
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scisors">Scisors</button>
-        <h1 id="res"></h1>
-        <h2 id="roundRes"></h2>
-        <div id="humanScore"></div>
-        <div id="computerScore"></div>
+    </header>
+    <main>
+        <section class="janken-button">
+            <button id="rock"></button>
+            <button id="paper"></button>
+            <button id="scisors"></button>
+        </section>
+
+        <section class="computer-janken">
+            <div id="humanChoice"></div>
+            <div id="compChoice"></div>
+        </section>
+
+        <div class="result">
+            <h2 id="roundRes"></h2>
+        </div>
+        
+        <div class="score">
+            <div class="human">
+                <h2 id="humanScore"></h2>
+                <h2 id="humanText"></h2>
+            </div>
+            <div class="robot">
+                <h2 id="computerScore"></h2>
+                <h2 id="robotText"></h2>
+            </div>
+        </div>
+
+        <div class="finalRes">
+            <h1 id="res"></h1>
+        </div>
+        <div class="restart">
+        </div>
     </main>
 </body>
 
 </html>
 
 <script src="./script.js">
-
-
 </script>
+
+<style>
+    body{
+        background: #18236f;
+        padding: 0;
+        margin: 0;
+    }
+    header{
+        background: #878585;
+        padding: 20px;
+        margin-bottom: 100px;
+    }
+    header h1{
+        color: rgb(245, 250, 255);
+        padding: 0;
+        margin: 0;
+    }
+    #rock {
+        height: 80px;
+        width: 80px;
+        cursor: pointer;
+        background: url('./img/rock-svgrepo-com.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border: none;
+        transition: transform 0.3s ease-in-out; 
+    }
+    #rock:hover{
+        transform: scale(1.2); 
+    }
+
+    #paper {
+        height: 80px;
+        width: 80px;
+        cursor: pointer;
+        background: url('./img/paper-sheet-svgrepo-com.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border: none;
+        transition: transform 0.3s ease-in-out; 
+    }
+    #paper:hover{
+        transform: scale(1.2);
+    }
+    #scisors {
+        height: 80px;
+        width: 80px;
+        cursor: pointer;
+        background: url('./img/scissors_1230737.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border: none;
+        transition: transform 0.3s ease-in-out; 
+    }
+    #scisors:hover{
+        transform: scale(1.2);
+    }
+    
+    .computer-janken{
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        gap: 80px;
+    }
+
+    .janken-button{
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        margin-bottom: 100px;
+    }
+    
+    .result{
+        display: flex;
+        justify-content: center;
+        color: #ababab;
+    }
+    
+    .score{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ababab;   
+        gap: 100px; 
+        /* flex-direction: column; */
+    }
+    .finalRes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ababab;    
+        
+    }
+    .restart{
+        display: flex;
+        justify-content: center;
+    }
+</style>
