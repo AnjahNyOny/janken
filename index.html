@@ -24,13 +24,24 @@
         </section>
 
         <div class="result">
-            <h1 id="res"></h1>
             <h2 id="roundRes"></h2>
         </div>
-
+        
         <div class="score">
-            <h2 id="humanScore"></h2>
-            <h2 id="computerScore"></h2>
+            <div class="human">
+                <h2 id="humanScore"></h2>
+                <h2 id="humanText"></h2>
+            </div>
+            <div class="robot">
+                <h2 id="computerScore"></h2>
+                <h2 id="robotText"></h2>
+            </div>
+        </div>
+
+        <div class="finalRes">
+            <h1 id="res"></h1>
+        </div>
+        <div class="restart">
         </div>
     </main>
 </body>
@@ -124,7 +135,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        color: #ababab;   
+        gap: 100px; 
+        /* flex-direction: column; */
+    }
+    .finalRes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: #ababab;    
-        flex-direction: column;
+        
+    }
+    .restart{
+        display: flex;
+        justify-content: center;
     }
 </style>
